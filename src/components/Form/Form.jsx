@@ -1,4 +1,3 @@
-// import { PropTypes } from 'prop-types';
 import { useState } from 'react';
 import { Button } from 'components/Styled';
 import { FormContainer } from './Form.styled';
@@ -81,9 +80,5 @@ const Form = () => {
     </>
   );
 };
-
-// Form.propTypes = {
-//   onSubmit: PropTypes.func.isRequired,
-// };
 
 export default Form;

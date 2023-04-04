@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { PhoneBookStyled } from './PhoneBook.styled';
 import { Button } from 'components/Styled';
 import Section from 'components/Section/Section';
@@ -12,11 +11,6 @@ import { setFilter } from 'redux/filterSlice';
 import { clearContacts } from 'redux/contactsSlice';
 
 const PhoneBook = () => {
-  // const storedContacts = window.localStorage.getItem('contacts');
-  // const parsedContacts = JSON.parse(storedContacts);
-
-  // const [contacts, setContacts] = useState(parsedContacts ?? []);
-
   const contacts = useSelector(getContacts);
 
   const dispatch = useDispatch();
@@ -30,10 +24,6 @@ const PhoneBook = () => {
   const handleFilter = e => {
     dispatch(setFilter(e.target.value));
   };
-
-  useEffect(() => {
-    window.localStorage.setItem('contacts', JSON.stringify(contacts));
-  }, [contacts]);
 
   return (
     <PhoneBookStyled>

@@ -1,4 +1,3 @@
-// import { PropTypes } from 'prop-types';
 import { List } from '../ContactsList/ContactsList.styled';
 import { Contact } from '../Styled';
 import { Button } from 'components/Styled';
@@ -36,16 +35,5 @@ const ContactsList = () => {
     </List>
   );
 };
-
-// ContactsList.propTypes = {
-//   contacts: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       number: PropTypes.string.isRequired,
-//     })
-//   ).isRequired,
-//   onDeleteContact: PropTypes.func.isRequired,
-// };
 
 export default ContactsList;
